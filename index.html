@@ -4,13 +4,21 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!--  -->
+
+    <!-- Link Rel  -->
     <link rel="stylesheet" href="style/tailwind.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="style/build.css">
     <link rel="icon" href="img/icon.png">
     <link rel="stylesheet" href="dist/aos.css" />
+
+    <!-- Script -->
     <script src="js/tailwind.config.js"></script>
+    <script>function myJsFunc() {
+        alert("Coming soon!");
+    }</script>
+
+    <!-- Style -->
     <style>
         @font-face {
             font-family: myFirstFont;
@@ -55,70 +63,75 @@
 
         .pattern {
             background-image: url("img/background.png");
-            height: 110%;
+            height: 100%;
             width: auto;
             position: sticky;
             background-size: cover;
-            
+            background-repeat: no-repeat;
+        }
+        @media only screen and (max-width:640px){
+            .pattern{
+            background-size: 100%;
+            background-repeat: no-repeat; 
+            background-image: url("img/phonebg.png");
+            }
         }
 
         .svg1 {
             z-index: 2;
         }
+
         .grad {
-            background-image: linear-gradient(to bottom right, #343434 , #1D1D1D);
+            background-image: linear-gradient(to bottom right, #343434, #1D1D1D);
         }
 
         .grad1 {
-            background-image: linear-gradient(to right, #343434 , #1D1D1D);
+            background-image: linear-gradient(to right, #343434, #1D1D1D);
         }
+
         
-
     </style>
+
     <title>Haikal Danung Trinanda</title>
-
-
 </head>
 
 <body>
 
     <!-- Nav -->
     <header>
-         <script
-            src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer>
-            </script>
-            <div class="w-full text-white fixed z-50 grad1 ">
-                <div x-data="{ open: false }"
-                    class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
-                    <div class="p-4 flex flex-row items-center justify-between">
-                        <a href="#"
-                            class="text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline">
-                            <img class="w-auto h-7" src="img/header.png" alt="" /></a>
-                        <button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline"
-                            @click="open = !open">
-                            <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
-                                <path x-show="!open" fill-rule="evenodd"
-                                    d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
-                                    clip-rule="evenodd"></path>
-                                <path x-show="open" fill-rule="evenodd"
-                                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                                    clip-rule="evenodd"></path>
-                            </svg>
-                        </button>
-                    </div>
-                    <nav :class="{'flex': open, 'hidden': !open}"
-                        class="flex-col flex-grow pb-2 md:pb-0 hidden md:flex md:justify-end md:flex-row">
-
-                        <a class="px-4 py-2 mt-2 text-lg font-semibold  rounded-lg  md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-                            href="index.html">Home</a>
-                        <a class="px-4 py-2 mt-2 text-lg font-semibold bg-transparent rounded-lg  md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-                            href="#profil">About Me</a>
-                        <a class="px-4 py-2 mt-2 text-lg font-semibold bg-transparent rounded-lg  md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-                            href="#kerjaan">My Work</a>
-                        <a class="px-4 py-2 mt-2 text-lg font-semibold bg-transparent rounded-lg  md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-                            href="#kontak">Contact</a>
+        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer>
+        </script>
+        <div class="w-full text-white fixed z-50 grad1 ">
+            <div x-data="{ open: false }"
+                class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
+                <div class="p-4 flex flex-row items-center justify-between">
+                    <a href="#"
+                        class="text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline">
+                        <img class="w-auto h-7" src="img/header.png" alt="" /></a>
+                    <button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
+                        <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+                            <path x-show="!open" fill-rule="evenodd"
+                                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+                                clip-rule="evenodd"></path>
+                            <path x-show="open" fill-rule="evenodd"
+                                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
                 </div>
+                <nav :class="{'flex': open, 'hidden': !open}"
+                    class="flex-col flex-grow pb-2 md:pb-0 hidden md:flex md:justify-end md:flex-row">
+
+                    <a class="px-4 py-2 mt-2 text-lg font-semibold  rounded-lg  md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                        href="index.html">Home</a>
+                    <a class="px-4 py-2 mt-2 text-lg font-semibold bg-transparent rounded-lg  md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                        href="#profil">About Me</a>
+                    <a class="px-4 py-2 mt-2 text-lg font-semibold bg-transparent rounded-lg  md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                        href="#kerjaan">My Work</a>
+                    <a class="px-4 py-2 mt-2 text-lg font-semibold bg-transparent rounded-lg  md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                        href="#kontak">Contact</a>
             </div>
+        </div>
         </nav>
     </header>
 
@@ -128,9 +141,9 @@
             class="container mx-auto flex flex-col justify-center p-6 sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
             <div class="flex items-center justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
             </div>
-            <div class="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
-                <h1 class="text-5xl font-bold leading-none sm:text-6xl text-right text-white font4">HELLO THERE!</h1>
-                <h1 class="text-5xl font-bold leading-none sm:text-4xl text-right text-white font4">NICE TO MEET YOU
+            <div class="flex flex-col justify-center sm:p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left ">
+                <h1 class="text-3xl font-bold leading-none sm:text-6xl text-right text-white font4">HELLO THERE!</h1>
+                <h1 class="text-2xl font-bold leading-none sm:text-4xl text-right text-white font4">NICE TO MEET YOU
                 </h1>
                 <p class="mt-6 mb-8 text-lg sm:mb-12 text-right text-white font3">I`M HAIKAL DANUNG TRINANDA
                     <br class="hidden md:inline lg:hidden text-right font3 text-white"><br>Indonesian Modder, Designer,
@@ -139,7 +152,7 @@
             </div>
         </div>
         <span
-            class="p-20 animate__animated animated bounce animate__bounce absolute w-full bottom-10 flex items-center justify-center svg1">
+            class="p-18 animate__animated animated bounce animate__bounce absolute w-full bottom-10 flex items-center justify-center svg1">
             <a href="#profil">
                 <img src="img/arrow.png" alt="" class="h-5">
             </a>
@@ -178,17 +191,16 @@
                     </div>
                     <div
                         class="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
-                        <a href="#"
+                        <a href="javascript:void(0)" onclick="myJsFunc();"
                             class="px-8 py-3 text-lg font-semibold rounded-full shadow-2xl bg-green-600 hover:bg-white text-white hover:text-green-600">My
                             CV</a>
-                        <a href="#"
+                        <a href="javascript:void(0)" onclick="myJsFunc();"
                             class="px-8 py-3 text-lg font-semibold rounded-full shadow-2xl bg-yellow-600 hover:bg-white text-white hover:text-yellow-600">My
                             Resume</a>
                     </div>
                 </div>
                 <div>
-                    <img class="" src="img/Parpol.png"
-                        alt="" />
+                    <img class="" src="img/Parpol.png" alt="" />
                 </div>
             </div>
         </div>
@@ -215,7 +227,8 @@
             </div>
             <div class="grid grid-cols-1 gap-x-4 gap-y-8 md:grid-cols-2 lg:grid-cols-4">
                 <article class="flex flex-col d">
-                    <a href="http://gtechtive.rf.gd" target="_blank" aria-label="Te nulla oportere reprimique his dolorum">
+                    <a href="http://gtechtive.rf.gd" target="_blank"
+                        aria-label="Te nulla oportere reprimique his dolorum">
                         <img alt="" class="object-cover w-full h-52" src="img/pv1.png">
                     </a>
                     <div class="flex flex-col flex-1 p-6">
@@ -235,7 +248,7 @@
                     </div>
                 </article>
                 <article class="flex flex-col d">
-                    <a href="#" aria-label="Te nulla oportere reprimique his dolorum">
+                    <a href="javascript:void(0)" onclick="myJsFunc();" aria-label="Te nulla oportere reprimique his dolorum">
                         <img alt="" class="object-cover w-full h-52" src="img/pv2.png">
                     </a>
                     <div class="flex flex-col flex-1 p-6">
@@ -254,7 +267,8 @@
                     </div>
                 </article>
                 <article class="flex flex-col d">
-                    <a href="https://sharemygame.com/@hkldtrinanda/theassasins-thejourney" target="_blank" aria-label="Te nulla oportere reprimique his dolorum">
+                    <a href="https://sharemygame.com/@hkldtrinanda/theassasins-thejourney" target="_blank"
+                        aria-label="Te nulla oportere reprimique his dolorum">
                         <img alt="" class="object-cover w-full h-52" src="img/pv3.png">
                     </a>
                     <div class="flex flex-col flex-1 p-6">
@@ -277,7 +291,7 @@
                     </div>
                 </article>
                 <article class="flex flex-col d">
-                    <a href="#" target="_blank" aria-label="Te nulla oportere reprimique his dolorum">
+                    <a href="javascript:void(0)" onclick="myJsFunc();" target="_blank" aria-label="Te nulla oportere reprimique his dolorum">
                         <img alt="" class="object-cover w-full h-52" src="img/pv8.png">
                     </a>
                     <div class="flex flex-col flex-1 p-6">
@@ -298,7 +312,7 @@
             </div>
             <div class="grid grid-cols-1 gap-x-4 gap-y-8 md:grid-cols-2 lg:grid-cols-4">
                 <article class="flex flex-col d">
-                    <a href="#" aria-label="Te nulla oportere reprimique his dolorum">
+                    <a href="https://www.youtube.com/watch?v=dUV4UH-F7JY&pp=sAQA" aria-label="Te nulla oportere reprimique his dolorum">
                         <img alt="" class="object-cover w-full h-52" src="img/pv4.png">
                     </a>
                     <div class="flex flex-col flex-1 p-6">
@@ -321,7 +335,8 @@
                     </div>
                 </article>
                 <article class="flex flex-col d">
-                    <a href="https://youtu.be/lk5YHQC4uqU" target="_blank" aria-label="Te nulla oportere reprimique his dolorum">
+                    <a href="https://youtu.be/lk5YHQC4uqU" target="_blank"
+                        aria-label="Te nulla oportere reprimique his dolorum">
                         <img alt="" class="object-cover w-full h-52" src="img/pv5.png">
                     </a>
                     <div class="flex flex-col flex-1 p-6">
@@ -348,8 +363,9 @@
                     </div>
                 </article>
                 <article class="flex flex-col d">
-                    <a href="https://youtu.be/hMW-p7fmHRk" target="_blank" aria-label="Te nulla oportere reprimique his dolorum">
-                        <img alt="" class="object-cover w-full h-52" src="img/pv7.png">
+                    <a href="https://youtu.be/hMW-p7fmHRk" target="_blank"
+                        aria-label="Te nulla oportere reprimique his dolorum">
+                        <img alt="" class="object-cover w-full h-52" src="img/Pv7.png">
                     </a>
                     <div class="flex flex-col flex-1 p-6">
                         <p class="text-xs tracking-wider uppercase ">Trailer Game Technology Anniversary 1st</p>
@@ -370,13 +386,15 @@
                         </div>
                     </div>
                 </article>
-               
+
                 <article class="flex flex-col d">
-                    <a href="https://www.youtube.com/watch?v=6BYlu2UbiTc&t=1s&pp=sAQA" target="_blank" aria-label="Te nulla oportere reprimique his dolorum">
-                        <img alt="" class="object-cover w-full h-52" src="img/pv7.png">
+                    <a href="https://www.youtube.com/watch?v=6BYlu2UbiTc&t=1s&pp=sAQA" target="_blank"
+                        aria-label="Te nulla oportere reprimique his dolorum">
+                        <img alt="" class="object-cover w-full h-52" src="img/Pv7.png">
                     </a>
                     <div class="flex flex-col flex-1 p-6">
-                        <p class="text-xs tracking-wider uppercase ">Game Technology Anniversary 1st (E-Sport Competition)</p>
+                        <p class="text-xs tracking-wider uppercase ">Game Technology Anniversary 1st (E-Sport
+                            Competition)</p>
                         <h3 class="flex-1 py-2 text-lg font-semibold leading-snug">FINISHED</h3>
                         <div class="flex flex-wrap justify-start text-xs ">
                             <div
@@ -397,7 +415,8 @@
             </div>
             <div class="grid grid-cols-1 gap-x-4 gap-y-8 md:grid-cols-2 lg:grid-cols-4">
                 <article class="flex flex-col d">
-                    <a href="https://youtu.be/dSSD8hIkVso" target="_blank" aria-label="Te nulla oportere reprimique his dolorum">
+                    <a href="https://youtu.be/dSSD8hIkVso" target="_blank"
+                        aria-label="Te nulla oportere reprimique his dolorum">
                         <img alt="" class="object-cover w-full h-52" src="img/pv6.jpg">
                     </a>
                     <div class="flex flex-col flex-1 p-6">
@@ -425,7 +444,8 @@
             <h1 class="text-lg font-bold text-center lg:text-2xl font3">
                 Interested in communicating with me?
             </h1>
-            <p class="text-sm text-center">Interested in working with me? Need help on your project? <br>Or just wanna say hi? I’d love to hear you about that.</p>
+            <p class="text-sm text-center">Interested in working with me? Need help on your project? <br>Or just wanna
+                say hi? I’d love to hear you about that.</p>
             <h3 class="text-center font-bold font3">Hit me up on my social media :</h3>
 
 
@@ -436,16 +456,16 @@
                 <div class="flex flex-col mt-4 md:m-0 ">
                     <div class="flex-wrap justify-start flex">
                         <a href="https://www.linkedin.com/in/haikal-danung-trinanda-9433ba219/" target="_blank"
-                            class="px-2"><img alt="" class="object-contain h-8 hover:opacity-75" src="img/linkedin_icon.png"></a>
-                        <a href="https://www.instagram.com/hkldtrinanda" target="_blank"
-                            class="px-2"><img alt="" class="object-contain h-8 hover:opacity-75" src="img/insta_icon.png"></a>
+                            class="px-2"><img alt="" class="object-contain h-8 hover:opacity-75"
+                                src="img/linkedin_icon.png"></a>
+                        <a href="https://www.instagram.com/hkldtrinanda" target="_blank" class="px-2"><img alt=""
+                                class="object-contain h-8 hover:opacity-75" src="img/insta_icon.png"></a>
                         <!--<a href=""
                             class="px-2"><img alt="" class="object-contain h-8  hover:opacity-75" src="img/mail_icon.png"></a>-->
                     </div>
                 </div>
                 <div>
-                    <a href="#"
-                        class="text-xl font-bold text-white hover:text-gray-700 font2">He</a>
+                    <a href="#" class="text-xl font-bold text-white hover:text-gray-700 font2">He</a>
                 </div>
 
             </div>
