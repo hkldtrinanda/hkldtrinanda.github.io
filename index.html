@@ -1,477 +1,456 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Link Rel  -->
-    <link rel="stylesheet" href="style/tailwind.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link rel="stylesheet" href="style/build.css">
-    <link rel="icon" href="img/icon.png">
-    <link rel="stylesheet" href="dist/aos.css" />
-
-    <!-- Script -->
-    <script src="js/tailwind.config.js"></script>
-    <script>function myJsFunc() {
-        alert("Coming soon!");
-    }</script>
-
-    <!-- Style -->
-    <style>
-        @font-face {
-            font-family: myFirstFont;
-            src: url(font/ArimoSemiBold.ttf);
-        }
-
-        .font1 {
-            font-family: myFirstFont;
-        }
-
-        @font-face {
-            font-family: mysecondFont;
-            src: url(font/Quantum.otf);
-        }
-
-        .font2 {
-            font-family: mysecondFont;
-        }
-
-        @font-face {
-            font-family: mythirdFont;
-            src: url(font/MavenProMedium.ttf);
-        }
-
-        .font3 {
-            font-family: mythirdFont;
-        }
-
-        @font-face {
-            font-family: myfourthFont;
-            src: url(font/Montserrat-Bold.otf);
-        }
-
-        .font4 {
-            font-family: myfourthFont;
-        }
-
-        .animated {
-            animation-duration: 2.5s;
-            animation-iteration-count: infinite;
-        }
-
-        .pattern {
-            background-image: url("img/background.png");
-            height: 100%;
-            width: auto;
-            position: sticky;
-            background-size: cover;
-            background-repeat: no-repeat;
-        }
-        @media only screen and (max-width:640px){
-            .pattern{
-            background-size: 100%;
-            background-repeat: no-repeat; 
-            background-image: url("img/phonebg.png");
-            }
-        }
-
-        .svg1 {
-            z-index: 2;
-        }
-
-        .grad {
-            background-image: linear-gradient(to bottom right, #343434, #1D1D1D);
-        }
-
-        .grad1 {
-            background-image: linear-gradient(to right, #343434, #1D1D1D);
-        }
-
-        
-    </style>
-
-    <title>Haikal Danung Trinanda</title>
+  <title>Portofolio Website</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap">
+  <link rel="stylesheet" href="css/tailwind/tailwind.min.css">
+  <link rel="stylesheet" href="dist/aos.css">
+  <link rel="stylesheet" href="css/main.css">
+  <!-- <link rel="stylesheet" href="css/style.css"> -->
+  <link rel="icon" type="image/png" sizes="16x16" href="images/he.png">
+  <script src="js/main.js"></script>
+  <script type="text/javascript" src="dist/aos.js"></script>
+  <script type="text/javascript" src="dist/js/function.js"></script>
 </head>
 
-<body>
+<body class="antialiased bg-body text-body font-body">
+  <!-- BOT TO TOP -->
+  <button class="hidden" onclick="window.scrollTo(0,0)" id="tombolup" title="Go to top">
+    <div class="w-14 sm:w-24 bottom-14 right-8 z-50 cursor-pointer fixed hover:w-32">
+      <img src="images/pad.png">
+    </div>
+  </button>
+  <div class="">
 
-    <!-- Nav -->
-    <header>
-        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer>
-        </script>
-        <div class="w-full text-white fixed z-50 grad1 ">
-            <div x-data="{ open: false }"
-                class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
-                <div class="p-4 flex flex-row items-center justify-between">
-                    <a href="#"
-                        class="text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline">
-                        <img class="w-auto h-7" src="img/header.png" alt="" /></a>
-                    <button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
-                        <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
-                            <path x-show="!open" fill-rule="evenodd"
-                                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
-                                clip-rule="evenodd"></path>
-                            <path x-show="open" fill-rule="evenodd"
-                                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                    </button>
-                </div>
-                <nav :class="{'flex': open, 'hidden': !open}"
-                    class="flex-col flex-grow pb-2 md:pb-0 hidden md:flex md:justify-end md:flex-row">
+    <section class="text-white text-lg font-sans font-bold relative bg-darkBlueGray-500">
+      <nav class="flex justify-between px-6 lg:px-12 py-4">
+        <div class="flex w-full justify-between grid-cols-2">
+          <a href="#">
+            <img class="h-12" src="images/he.png" alt=""></a>
+          <div class="flex items-center ml-auto">
 
-                    <a class="px-4 py-2 mt-2 text-lg font-semibold  rounded-lg  md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-                        href="index.html">Home</a>
-                    <a class="px-4 py-2 mt-2 text-lg font-semibold bg-transparent rounded-lg  md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-                        href="#profil">About Me</a>
-                    <a class="px-4 py-2 mt-2 text-lg font-semibold bg-transparent rounded-lg  md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-                        href="#kerjaan">My Work</a>
-                    <a class="px-4 py-2 mt-2 text-lg font-semibold bg-transparent rounded-lg  md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-                        href="#kontak">Contact</a>
-            </div>
+            <ul class="hidden px-4 xl:flex">
+              <li class="mr-11 border-b border-blue-500 border-opacity-40 pb-px"><a class="hover:opacity-80"
+                  href="#">Home</a></li>
+              <li class="mr-11 border-b border-blue-500 border-opacity-40 pb-px"><a class="hover:opacity-80"
+                  href="#">About</a></li>
+              <li class="mr-11 border-b border-blue-500 border-opacity-40 pb-px"><a class="hover:opacity-80"
+                  href="#">Works</a></li>
+              <li class="mr-11 border-b border-blue-500 border-opacity-40 pb-px"><a class="hover:opacity-80"
+                  href="#">Contact</a></li>
+              <li class="border-b border-blue-500 border-opacity-40 pb-px">
+            </ul>
+          </div>
+          <div class="relative hidden xl:block">
+            <img class="absolute top-1/2 transform -translate-y-2/4 pl-6 mt-px"
+              src="uinel-assets/elements/navigations/search-gray-icon.svg" alt="">
+          </div>
         </div>
-        </nav>
-    </header>
-
-    <!-- Content -->
-    <section class="h-full flex items-center pattern">
-        <div
-            class="container mx-auto flex flex-col justify-center p-6 sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
-            <div class="flex items-center justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
-            </div>
-            <div class="flex flex-col justify-center sm:p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left ">
-                <h1 class="text-3xl font-bold leading-none sm:text-6xl text-right text-white font4">HELLO THERE!</h1>
-                <h1 class="text-2xl font-bold leading-none sm:text-4xl text-right text-white font4">NICE TO MEET YOU
-                </h1>
-                <p class="mt-6 mb-8 text-lg sm:mb-12 text-right text-white font3">I`M HAIKAL DANUNG TRINANDA
-                    <br class="hidden md:inline lg:hidden text-right font3 text-white"><br>Indonesian Modder, Designer,
-                    Game<br>Developer, And Photographer
-                </p>
-            </div>
-        </div>
-        <span
-            class="p-18 animate__animated animated bounce animate__bounce absolute w-full bottom-10 flex items-center justify-center svg1">
-            <a href="#profil">
-                <img src="img/arrow.png" alt="" class="h-5">
-            </a>
-        </span>
-    </section>
-
-    <!-- Profile  -->
-    <div class="grad" id="profil">
-        <div
-            class="px-4 pt-4 pb-1 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:pt-20 lg:pb-1 ">
-            <h2
-                class="max-w-lg mb-2 font-sans text-8xl font-bold tracking-tight text-white sm:text-6xl sm:leading-none font4 ">
-                Who Am I?
-            </h2>
-            <p class="text-base text-white md:text-lg font3">
-                here you can recognize me
+        <button class="navbar-burger self-center xl:hidden focus:outline-none">
+          <svg width="25" height="16" viewbox="0 0 25 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="25" height="2" fill="currentColor"></rect>
+            <rect y="14" width="25" height="2" fill="currentColor"></rect>
+          </svg></button>
+      </nav>
+      <div class="navbar-menu hidden fixed top-0 right-0 bottom-0 w-5/6 max-w-sm z-50">
+        <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-80"></div>
+        <nav class="relative flex flex-col py-8 h-full w-full bg-white overflow-y-auto">
+          <div class="flex items-center pl-16 mb-8">
+            <a class="text-2xl text-gray-800 font-bold" href="#">
+              <img class="h-12" src="images/he_blck.png" alt=""></a>
+          </div>
+          <div class="flex items-center mb-10 px-10">
+            <a class="flex items-center ml-1" href="#">
+              <!-- <img class="ml-6" src="uinel-assets/elements/navigations/avatar-online.png" alt=""> -->
+              <!-- <img class="ml-6" src="uinel-assets/elements/navigations/arrow-down-gray.svg" alt=""></a> -->
+              <!-- <a class="text-gray-400 hover:text-gray-500 ml-auto" href="#">
+              <svg width="20" height="23" viewbox="0 0 20 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M17.5219 18.016H2.70312V8.5933C2.70313 6.719 3.48375 4.92147 4.87328 3.59614C6.2628 2.27081 8.1474 1.52625 10.1125 1.52625C12.0776 1.52625 13.9622 2.27081 15.3517 3.59614C16.7412 4.92147 17.5219 6.719 17.5219 8.5933V18.016Z"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M1 18.0121H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+                <path d="M8.87891 22H10.8789" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+              </svg></a> -->
+          </div>
+          <div>
+            <ul>
+              <li class="mb-1 px-10"><a class="block pl-8 py-4 text-body text-lg rounded-full hover:shadow-2xl"
+                  href="#">Home</a></li>
+              <li class="mb-1 px-10"><a class="block pl-8 py-4 text-body text-lg rounded-full hover:shadow-2xl"
+                  href="#">About</a></li>
+              <li class="mb-1 px-10"><a class="block pl-8 py-4 text-body text-lg rounded-full hover:shadow-2xl"
+                  href="#">Contact</a></li>
+            </ul>
+          </div>
+          <div class="mt-auto px-10">
+            <button
+              class="py-3 px-5 mt-6 w-full font-body font-bold uppercase tracking-wide text-sm border-2 border-gray-200 hover:border-gray-300 border-opacity-50 rounded-full">
+              <span class="block mt-px text-gray-500">My Works</span>
+            </button>
+            <p class="mt-6 mb-4 text-center">
+              <span class="text-sm text-darkBlueGray-400">2021 © hkldtrinanda.</span>
             </p>
-        </div>
-        <div class="px-4 py-2 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-10 ">
-            <div class="grid gap-5 row-gap-8 lg:grid-cols-2">
-                <div class="flex flex-col justify-center">
-                    <div class="max-w-xl mb-6">
-                        <br>
-                        <h2
-                            class="max-w-lg mb-3 font-sans text-3xl font-bold tracking-tight text-white sm:text-4xl sm:leading-none font4 ">
-                            Do with desire.
-                        </h2>
-                        <p class="text-base text-white md:text-sm font3 ">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquet scelerisque
-                            fermentum.
-                            Nulla nunc est, efficitur sed laoreet sed, fringilla vel velit. Praesent<br>tempus
-                            condimentum ligula eu efficitur.
-                            Praesent consequat quam eget magna<br>viverra ornare. Mauris sapien felis, convallis ut
-                            eleifend sed, eleifend in odio.
-                        </p>
-                    </div>
-                    <div
-                        class="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
-                        <a href="javascript:void(0)" onclick="myJsFunc();"
-                            class="px-8 py-3 text-lg font-semibold rounded-full shadow-2xl bg-green-600 hover:bg-white text-white hover:text-green-600">My
-                            CV</a>
-                        <a href="javascript:void(0)" onclick="myJsFunc();"
-                            class="px-8 py-3 text-lg font-semibold rounded-full shadow-2xl bg-yellow-600 hover:bg-white text-white hover:text-yellow-600">My
-                            Resume</a>
-                    </div>
-                </div>
-                <div>
-                    <img class="" src="img/Parpol.png" alt="" />
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Divide -->
-    <div class="px-28 gap-13 grad1">
-        <div class="grid grid-cols-1 divide-y-4 divide-white">
-            <div></div>
-            <div>
-                <br><br><br>
-            </div>
-        </div>
-    </div>
-
-
-    <!-- Gallery -->
-    <section class=" grad text-white" id="kerjaan">
-        <div class="container p-6 mx-auto space-y-8 py-16   ">
-            <div class="space-y-2 text-right">
-                <h2 class="text-5xl font-bold font4 animate__fadeInDown animate__animated">My Work</h2>
-                <p class="font-serif text-sm  font3">Here is the work I have done before, I hope
-                    you enjoy it</p><br>
-            </div>
-            <div class="grid grid-cols-1 gap-x-4 gap-y-8 md:grid-cols-2 lg:grid-cols-4">
-                <article class="flex flex-col d">
-                    <a href="http://gtechtive.rf.gd" target="_blank"
-                        aria-label="Te nulla oportere reprimique his dolorum">
-                        <img alt="" class="object-cover w-full h-52" src="img/pv1.png">
-                    </a>
-                    <div class="flex flex-col flex-1 p-6">
-                        <p class="text-xs tracking-wider uppercase ">Game Technology Student
-                            Association</p>
-                        <h3 class="flex-1 py-2 text-lg font-semibold leading-snug">FINISHED</h3>
-                        <div class="flex flex-wrap justify-start text-xs ">
-                            <div
-                                class=" border rounded-bl-lg bg-green-600 border-transparent text-white text-sm p-1 border-gray-900">
-                                Front End
-                            </div>
-                            <div
-                                class=" border rounded-bl-lg bg-green-600 border-transparent text-white text-sm p-1 border-gray-900">
-                                UI/UX Design
-                            </div>
-                        </div>
-                    </div>
-                </article>
-                <article class="flex flex-col d">
-                    <a href="javascript:void(0)" onclick="myJsFunc();" aria-label="Te nulla oportere reprimique his dolorum">
-                        <img alt="" class="object-cover w-full h-52" src="img/pv2.png">
-                    </a>
-                    <div class="flex flex-col flex-1 p-6">
-                        <p class="text-xs tracking-wider uppercase ">Game Technology Study Program</p>
-                        <h3 class="flex-1 py-2 text-lg font-semibold leading-snug">FINISHED</h3>
-                        <div class="flex flex-wrap justify-start text-xs ">
-                            <div
-                                class=" border rounded-bl-lg bg-green-600 border-transparent text-white text-sm p-1 border-gray-900">
-                                Front End
-                            </div>
-                            <div
-                                class=" border rounded-bl-lg bg-green-600 border-transparent text-white text-sm p-1 border-gray-900">
-                                UI/UX Design
-                            </div>
-                        </div>
-                    </div>
-                </article>
-                <article class="flex flex-col d">
-                    <a href="https://sharemygame.com/@hkldtrinanda/theassasins-thejourney" target="_blank"
-                        aria-label="Te nulla oportere reprimique his dolorum">
-                        <img alt="" class="object-cover w-full h-52" src="img/pv3.png">
-                    </a>
-                    <div class="flex flex-col flex-1 p-6">
-                        <p class="text-xs tracking-wider uppercase ">The Assassin`s: The Journey</p>
-                        <h3 class="flex-1 py-2 text-lg font-semibold leading-snug">BETA TEST / DISCONTINUED</h3>
-                        <div class="flex flex-wrap justify-start text-xs ">
-                            <div
-                                class=" border rounded-bl-lg bg-green-600 border-transparent text-white text-sm p-1 border-gray-900">
-                                Back End
-                            </div>
-                            <div
-                                class=" border rounded-bl-lg bg-green-600 border-transparent text-white text-sm p-1 border-gray-900">
-                                UI/UX Design
-                            </div>
-                            <div
-                                class=" border rounded-bl-lg bg-green-600 border-transparent text-white text-sm p-1 border-gray-900">
-                                Game Designer
-                            </div>
-                        </div>
-                    </div>
-                </article>
-                <article class="flex flex-col d">
-                    <a href="javascript:void(0)" onclick="myJsFunc();" target="_blank" aria-label="Te nulla oportere reprimique his dolorum">
-                        <img alt="" class="object-cover w-full h-52" src="img/pv8.png">
-                    </a>
-                    <div class="flex flex-col flex-1 p-6">
-                        <p class="text-xs tracking-wider uppercase ">Ngebook</p>
-                        <h3 class="flex-1 py-2 text-lg font-semibold leading-snug">FINISHED</h3>
-                        <div class="flex flex-wrap justify-start text-xs ">
-                            <div
-                                class=" border rounded-bl-lg bg-green-600 border-transparent text-white text-sm p-1 border-gray-900">
-                                Front End
-                            </div>
-                            <div
-                                class=" border rounded-bl-lg bg-green-600 border-transparent text-white text-sm p-1 border-gray-900">
-                                UI/UX Design
-                            </div>
-                        </div>
-                    </div>
-                </article>
-            </div>
-            <div class="grid grid-cols-1 gap-x-4 gap-y-8 md:grid-cols-2 lg:grid-cols-4">
-                <article class="flex flex-col d">
-                    <a href="https://www.youtube.com/watch?v=dUV4UH-F7JY&pp=sAQA" aria-label="Te nulla oportere reprimique his dolorum">
-                        <img alt="" class="object-cover w-full h-52" src="img/pv4.png">
-                    </a>
-                    <div class="flex flex-col flex-1 p-6">
-                        <p class="text-xs tracking-wider uppercase ">Kidnapper</p>
-                        <h3 class="flex-1 py-2 text-lg font-semibold leading-snug">FINISHED</h3>
-                        <div class="flex flex-wrap justify-start text-xs ">
-                            <div
-                                class=" border rounded-bl-lg bg-green-600 border-transparent text-white text-sm p-1 border-gray-900">
-                                DOP
-                            </div>
-                            <div
-                                class=" border rounded-bl-lg bg-green-600 border-transparent text-white text-sm p-1 border-gray-900">
-                                Editor
-                            </div>
-                            <div
-                                class=" border rounded-bl-lg bg-green-600 border-transparent text-white text-sm p-1 border-gray-900">
-                                Sound Design
-                            </div>
-                        </div>
-                    </div>
-                </article>
-                <article class="flex flex-col d">
-                    <a href="https://youtu.be/lk5YHQC4uqU" target="_blank"
-                        aria-label="Te nulla oportere reprimique his dolorum">
-                        <img alt="" class="object-cover w-full h-52" src="img/pv5.png">
-                    </a>
-                    <div class="flex flex-col flex-1 p-6">
-                        <p class="text-xs tracking-wider uppercase ">Chocola</p>
-                        <h3 class="flex-1 py-2 text-lg font-semibold leading-snug">FINISHED</h3>
-                        <div class="flex flex-wrap justify-start text-xs ">
-                            <div
-                                class=" border rounded-bl-lg bg-green-600 border-transparent text-white text-sm p-1 border-gray-900">
-                                Editor
-                            </div>
-                            <div
-                                class=" border rounded-bl-lg bg-green-600 border-transparent text-white text-sm p-1 border-gray-900">
-                                DOP
-                            </div>
-                            <div
-                                class=" border rounded-bl-lg bg-green-600 border-transparent text-white text-sm p-1 border-gray-900">
-                                Visual Effect Artist
-                            </div>
-                            <div
-                                class=" border rounded-bl-lg bg-green-600 border-transparent text-white text-sm p-1 border-gray-900">
-                                Sound Design
-                            </div>
-                        </div>
-                    </div>
-                </article>
-                <article class="flex flex-col d">
-                    <a href="https://youtu.be/hMW-p7fmHRk" target="_blank"
-                        aria-label="Te nulla oportere reprimique his dolorum">
-                        <img alt="" class="object-cover w-full h-52" src="img/pv7.png">
-                    </a>
-                    <div class="flex flex-col flex-1 p-6">
-                        <p class="text-xs tracking-wider uppercase ">Trailer Game Technology Anniversary 1st</p>
-                        <h3 class="flex-1 py-2 text-lg font-semibold leading-snug">FINISHED</h3>
-                        <div class="flex flex-wrap justify-start text-xs ">
-                            <div
-                                class=" border rounded-bl-lg bg-green-600 border-transparent text-white text-sm p-1 border-gray-900">
-                                Editor
-                            </div>
-                            <div
-                                class=" border rounded-bl-lg bg-green-600 border-transparent text-white text-sm p-1 border-gray-900">
-                                Sound Designer
-                            </div>
-                            <div
-                                class=" border rounded-bl-lg bg-green-600 border-transparent text-white text-sm p-1 border-gray-900">
-                                Visual Effect Artist
-                            </div>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="flex flex-col d">
-                    <a href="https://www.youtube.com/watch?v=6BYlu2UbiTc&t=1s&pp=sAQA" target="_blank"
-                        aria-label="Te nulla oportere reprimique his dolorum">
-                        <img alt="" class="object-cover w-full h-52" src="img/pv7.png">
-                    </a>
-                    <div class="flex flex-col flex-1 p-6">
-                        <p class="text-xs tracking-wider uppercase ">Game Technology Anniversary 1st (E-Sport
-                            Competition)</p>
-                        <h3 class="flex-1 py-2 text-lg font-semibold leading-snug">FINISHED</h3>
-                        <div class="flex flex-wrap justify-start text-xs ">
-                            <div
-                                class=" border rounded-bl-lg bg-green-600 border-transparent text-white text-sm p-1 border-gray-900">
-                                Operator
-                            </div>
-                            <div
-                                class=" border rounded-bl-lg bg-green-600 border-transparent text-white text-sm p-1 border-gray-900">
-                                UI/UX Design
-                            </div>
-                            <div
-                                class=" border rounded-bl-lg bg-green-600 border-transparent text-white text-sm p-1 border-gray-900">
-                                Switcher
-                            </div>
-                        </div>
-                    </div>
-                </article>
-            </div>
-            <div class="grid grid-cols-1 gap-x-4 gap-y-8 md:grid-cols-2 lg:grid-cols-4">
-                <article class="flex flex-col d">
-                    <a href="https://youtu.be/dSSD8hIkVso" target="_blank"
-                        aria-label="Te nulla oportere reprimique his dolorum">
-                        <img alt="" class="object-cover w-full h-52" src="img/pv6.jpg">
-                    </a>
-                    <div class="flex flex-col flex-1 p-6">
-                        <p class="text-xs tracking-wider uppercase ">Flatcar by PT.Inka for Trainz Simulator</p>
-                        <h3 class="flex-1 py-2 text-lg font-semibold leading-snug">FINISHED</h3>
-                        <div class="flex flex-wrap justify-start text-xs ">
-                            <div
-                                class=" border rounded-bl-lg bg-green-600 border-transparent text-white text-sm p-1 border-gray-900">
-                                3D Model Artist
-                            </div>
-                            <div
-                                class=" border rounded-bl-lg bg-green-600 border-transparent text-white text-sm p-1 border-gray-900">
-                                Animator
-                            </div>
-                        </div>
-                    </div>
-                </article>
-            </div>
+          </div>
+        </nav><button class="navbar-close absolute top-5 p-6 right-5">
+          <div class="absolute top-3">
+            <span class="absolute w-px h-6 bg-black transform -rotate-45"></span>
+            <span class="absolute w-px h-6 bg-black transform rotate-45"></span>
+          </div>
+        </button>
+      </div>
     </section>
 
-
-    <!-- Footer -->
-    <footer class="flex justify-center px-4 text-white grad1" id="kontak ">
-        <div class="container py-6">
-            <h1 class="text-lg font-bold text-center lg:text-2xl font3">
-                Interested in communicating with me?
-            </h1>
-            <p class="text-sm text-center">Interested in working with me? Need help on your project? <br>Or just wanna
-                say hi? I’d love to hear you about that.</p>
-            <h3 class="text-center font-bold font3">Hit me up on my social media :</h3>
-
-
-            <hr class="h-px mt-6 border-white ">
-
-            <div class="flex flex-col items-center justify-between mt-6 md:flex-row">
-
-                <div class="flex flex-col mt-4 md:m-0 ">
-                    <div class="flex-wrap justify-start flex">
-                        <a href="https://www.linkedin.com/in/haikal-danung-trinanda-9433ba219/" target="_blank"
-                            class="px-2"><img alt="" class="object-contain h-8 hover:opacity-75"
-                                src="img/linkedin_icon.png"></a>
-                        <a href="https://www.instagram.com/hkldtrinanda" target="_blank" class="px-2"><img alt=""
-                                class="object-contain h-8 hover:opacity-75" src="img/insta_icon.png"></a>
-                        <!--<a href=""
-                            class="px-2"><img alt="" class="object-contain h-8  hover:opacity-75" src="img/mail_icon.png"></a>-->
-                    </div>
-                </div>
-                <div>
-                    <a href="#" class="text-xl font-bold text-white hover:text-gray-700 font2">He</a>
-                </div>
-
+    <!-- <div>
+      <div class="font-heading font-medium relative bg-blueGray-100">
+        <div class="navbar-menu hidden fixed top-0 left-0 bottom-0 w-5/6 max-w-sm z-50">
+          <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-80"></div>
+          <nav class="relative flex flex-col py-8 h-full w-full bg-white overflow-y-auto">
+            <div class="flex items-center pl-16 mb-8">
+              <a class="text-2xl text-gray-800 font-bold" href="#">
+                <img class="h-12" src="uinel-assets/logos/uinel-gray-black.svg" alt=""></a>
             </div>
+            <div class="flex items-center mb-10 px-10">
+              <a class="flex items-center ml-1" href="#">
+                <img class="ml-6" src="uinel-assets/elements/navigations/avatar-online.png" alt=""><img class="ml-6"
+                  src="uinel-assets/elements/navigations/arrow-down-gray.svg" alt=""></a>
+              <a class="text-gray-400 hover:text-gray-500 ml-auto" href="#">
+                <svg width="20" height="23" viewbox="0 0 20 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M17.5219 18.016H2.70312V8.5933C2.70313 6.719 3.48375 4.92147 4.87328 3.59614C6.2628 2.27081 8.1474 1.52625 10.1125 1.52625C12.0776 1.52625 13.9622 2.27081 15.3517 3.59614C16.7412 4.92147 17.5219 6.719 17.5219 8.5933V18.016Z"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M1 18.0121H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                  <path d="M8.87891 22H10.8789" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                </svg></a>
+            </div>
+            <div>
+              <ul>
+                <li class="mb-1 px-10"><a class="block pl-8 py-4 text-body text-lg rounded-full hover:shadow-2xl"
+                    href="#">New tools</a></li>
+                <li class="mb-1 px-10">
+                  <a class="flex items-center pl-8 py-4 text-body text-lg rounded-full hover:shadow-2xl" href="#">
+                    <span>Products</span>
+                    <svg class="ml-4" width="8" height="5" viewbox="0 0 8 5" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M6.97291 0.193232C7.20854 -0.0644107 7.58938 -0.0644107 7.82328 0.193232C8.05804 0.450875 8.05978 0.867141 7.82328 1.12478L4.42529 4.80677C4.19053 5.06441 3.81056 5.06441 3.57406 4.80677L0.176073 1.12478C-0.0586909 0.868102 -0.0586909 0.450875 0.176073 0.193232C0.411706 -0.0644107 0.792544 -0.0644107 1.02644 0.193232L4.00098 3.21284L6.97291 0.193232Z"
+                        fill="currentColor"></path>
+                    </svg></a>
+                </li>
+                <li class="mb-1 px-10"><a class="block pl-8 py-4 text-body text-lg rounded-full hover:shadow-2xl"
+                    href="#">Pricing</a></li>
+              </ul>
+            </div>
+            <div class="mt-auto px-10">
+              <button
+                class="py-3 px-5 mt-6 w-full text-body font-body font-bold uppercase tracking-wide text-sm border-2 border-gray-200 hover:border-gray-300 border-opacity-50 rounded-full">
+                <span class="block mt-px">New project</span>
+              </button>
+              <p class="mt-6 mb-4 text-center">
+                <span class="text-sm text-darkBlueGray-400">2021 © hkldtrinanda.</span>
+              </p>
+            </div>
+          </nav><button class="navbar-close absolute top-5 p-6 right-5">
+            <div class="absolute top-3">
+              <span class="absolute w-px h-6 bg-black transform -rotate-45"></span>
+              <span class="absolute w-px h-6 bg-black transform rotate-45"></span>
+            </div>
+          </button>
         </div>
-    </footer>
-    <!--  -->
+      </div> -->
+
+    <!-- Header -->
+    <section>
+      <div class="bg-blueGray-100">
+        <div class="container px-4 mx-auto">
+          <div class="relative pt-24 mb-16 xl:mb-0 z-20">
+            <span
+              class="block mb-9 font-medium tracking-widest uppercase text-center text-sm text-gray-300 items-center">
+              Hi, Welcome</span>
+            <h1 class="max-w-3xl mx-auto font-heading font-medium text-center text-9xl md:text-10xl leading-tight">
+              I`M HAIKAL DANUNG TRINANDA
+            </h1>
+          </div>
+        </div>
+        <div class="relative xl:-mt-32 max-w-max mx-auto ">
+          <img src="images/widget3.png" alt="" class="items-center">
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- About -->
+  <section class="bg-blueGray-100 py-24 2xl:py-44 overflow-hidden">
+    <div class="container px-4 mx-auto">
+      <div class="text-center">
+        <span class="text-sm text-gray-300 uppercase">Who Am I?</span>
+        <h2 class="mt-8 mb-24 font-heading font-medium text-7xl md:text-8xl xl:text-10xl">Here you can recognize me
+        </h2>
+      </div>
+      <div class="flex flex-wrap items-center justify-center -mx-4 mb-16 md:mb-28">
+        <div class="w-auto px-4 mb-4 xl:mb-0 text-center order-last sm:order-first">
+          <a class="inline-block" href="#">
+            <svg width="8" height="12" viewbox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg"></svg></a>
+        </div>
+        <div class="w-full sm:w-2/3 max-w-4xl px-4 mx-auto mb-16 sm:mb-0">
+          <div class="relative mb-5 px-8 md:px-20 bg-white rounded-7xl shadow-lg py-14">
+            <img class="absolute top-0 right-0 mr-12 transform -translate-y-1/2"
+              src="uinel-assets/images/team/quote-2.svg" alt="">
+            <p class="text-lg md:text-xl font-heading font-medium">A student from Jakarta who is currently pursuing a
+              bachelor's degree at one of the state universities in Jakarta by taking the Game Technology Study
+              Program</p>
+
+          </div>
+          <div class="flex flex-wrap -mx-4">
+            <div class="w-full lg:w-1/2 px-4 lg:flex-grow mb-8 lg:mb-0" data-aos="fade-right" data-aos-duration="1000">
+              <div class="h-full flex items-center py-5 px-8 md:px-20 bg-white rounded-7xl shadow-lg">
+                <div class="flex items-center justify-center text-left">
+                  <img class="mr-8 object-cover rounded-full w-20" src="images/Untitled1111.png" alt="">
+                  <div>
+                    <h4 class="text-xl font-heading font-medium mb-2">Haikal D Trinanda</h4>
+                    <p class="text-gray-400">Runes<br>(Foxxy Studio)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="w-full lg:w-1/2 px-4 lg:flex-grow" data-aos="fade-left" data-aos-duration="1000">
+              <div class="h-full pl-12 pr-4 bg-white rounded-7xl shadow-lg py-12">
+                <div class="flex items-center">
+                  <div class="mr-4">
+                    <p class="text-base rounded-full py-4 px-8 bg-sky-500 text-white border-transparent">My Resume</p>
+
+                  </div>
+                  <div class="rounded-full px-8 py-4 border-transparent bg-gray-100">
+
+                    <span class="font-medium text-base">My CV</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-auto px-4 mb-4 xl:mb-0 text-center order-last">
+          <a class="inline-block" href="#">
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Portofolio -->
+  <div>
+    <section class="p-8 pb-0 font-medium bg-blueGray-100">
+      <div class="relative py-24 2xl:py-44 bg-white z-10 rounded-t-10xl">
+        <div class="container px-4 mx-auto">
+          <h2 class=" font-heading leading-tight text-7xl md:text-8xl xl:text-10xl">My Works</h2>
+          <p class=" font-heading leading-tight text-sm md:text-lg xl:text-xl text-gray-200">Here is the work I have
+            done before, I
+            hope you enjoy it</p>
+          <!-- <div class="py-6 px-5 mb-20 xl:py-3 font-heading text-xl leading-7 bg-gray-50 rounded-8xl">
+            <div class="md:grid md:grid-cols-2 md:text-center xl:max-w-max xl:mx-auto xl:grid-cols-5" id="filtering">
+              <a class="block py-5 px-8 2xl:px-14 hover:opacity-70 active btns" onclick="filterSelection('all')">All</a>
+              <a class="block py-5 px-8 2xl:px-14 hover:opacity-70 btns" onclick="filterSelection('game')">Game</a>
+              <a class="block py-5 2xl:px-14 px-8 hover:opacity-70 btns" onclick="filterSelection('webdes')">Web
+                Design</a>
+              <a class="block py-5 px-8 2xl:px-14 hover:opacity-70 btns" onclick="filterSelection('com')">Commercial</a>
+              <a class="block py-5 px-8 2xl:px-14 hover:opacity-70 btns" onclick="filterSelection('moapps')">Mobile
+                Apps</a>
+            </div>
+          </div> -->
+          <div class="flex flex-wrap -mx-4 mb-20 xl:mb-36">
+            <div class="container px-5 py-24 mx-auto">
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 -m-4 ">
+                <div class="p-4 column game">
+                  <div class="flex relative">
+                    <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center"
+                      src="images/pv3.png" />
+                    <div
+                      class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+                      <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">Game Development
+                      </h2>
+                      <h1 class="title-font text-lg font-medium text-red-900 mb-3">The Assasins The Journey</h1>
+                      <p class="leading-relaxed text-yellow-500">Game Programming / UIUX / Game Designer</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="p-4 column mpm">
+                  <div class="flex relative">
+                    <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center"
+                      src="images/is.png" />
+                    <div
+                      class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+                      <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">Game Development
+                      </h2>
+                      <h1 class="title-font text-lg font-medium text-red-900 mb-3">Inertia Showdown</h1>
+                      <p class="leading-relaxed text-yellow-500">Game Programming</p>
+                      <span class="text-white"> &nbsp;</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Web Design -->
+                <div class="p-4 column mpm">
+                  <div class="flex relative">
+                    <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center"
+                      src="images/pemira1.png" />
+                    <div
+                      class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+                      <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">Web Development
+                      </h2>
+                      <h1 class="title-font text-lg font-medium text-red-900 mb-3">Pemira Polimedia 2021</h1>
+                      <p class="leading-relaxed text-yellow-500">Front-End</p>
+                      <span class="text-white"> &nbsp;</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="p-4 column mpm">
+                  <div class="flex relative">
+                    <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center"
+                      src="images/gtechtive.png" />
+                    <div
+                      class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+                      <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">Web Development
+                      </h2>
+                      <h1 class="title-font text-lg font-medium text-red-900 mb-3">HIMA Game Technology</h1>
+                      <p class="leading-relaxed text-yellow-500">Front-End</p>
+                      <span class="text-white"> &nbsp;</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="p-4 column mpm">
+                  <div class="flex relative">
+                    <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center"
+                      src="images/gta1.png" />
+                    <div
+                      class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+                      <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">Web Development
+                      </h2>
+                      <h1 class="title-font text-lg font-medium text-red-900 mb-3">GTAnniversary Vol.2</h1>
+                      <p class="leading-relaxed text-yellow-500">Front-End / UI/UX</p>
+                      <span class="text-white"> &nbsp;</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="p-4 column mpm">
+                  <div class="flex relative">
+                    <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center"
+                      src="images/porto1.png" />
+                    <div
+                      class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+                      <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">Web Development
+                      </h2>
+                      <h1 class="title-font text-lg font-medium text-red-900 mb-3">First Website!</h1>
+                      <p class="leading-relaxed text-yellow-500">Front-End / UI/UX</p>
+                      <span class="text-white"> &nbsp;</span>
+                    </div>
+                  </div>
+                </div>
+
+
+                <!-- Commercial -->
+                <div class="p-4 column mpm">
+                  <div class="flex relative">
+                    <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center"
+                      src="images/pv7.png" />
+                    <div
+                      class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+                      <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">Trailer</h2>
+                      <h1 class="title-font text-lg font-medium text-red-900 mb-3">Trailer
+                        GTAnniversary</h1>
+                      <p class="leading-relaxed text-yellow-500">Video Editor / Visual Effect</p>
+                      <span class="text-white"> &nbsp;</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="p-4 column mpm">
+                  <div class="flex relative">
+                    <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center"
+                      src="images/pv5.png" />
+                    <div
+                      class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+                      <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">Product
+                        Advertising
+                      </h2>
+                      <h1 class="title-font text-lg font-medium text-red-900 mb-3">Chocola</h1>
+                      <p class="leading-relaxed text-yellow-500">Video Editor</p>
+                      <span class="text-white"> &nbsp;</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- moapps -->
+                <div class="p-4 column mpm">
+                  <div class="flex relative">
+                    <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center"
+                      src="images/pv8.png" />
+                    <div
+                      class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+                      <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">Mobile Development
+                      </h2>
+                      <h1 class="title-font text-lg font-medium text-red-900 mb-3">Ngebook</h1>
+                      <p class="leading-relaxed text-yellow-500">UIUX / Programming</p>
+                      <span class="text-white"> &nbsp;</span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+    </section>
+    <div class="h-24 -mt-16 bg-blueGray-400"></div>
+  </div>
+
+  <!-- Footer -->
+  <section class="py-24 2xl:py-44 bg-blueGray-400">
+    <div class="container px-4 mx-auto">
+
+      <div class="flex flex-wrap items-center -mx-4">
+        <div class="w-full lg:w-1/6 px-4 mb-10 lg:mb-0">
+          <a class="font-bold text-xl" href="#">
+            <img class="h-12" src="images/he.png" alt=""></a>
+        </div>
+        <div class="w-full lg:w-3/6 px-4 mb-10 lg:mb-0">
+          <a class="mr-16 font-heading hover:text-darkBlueGray-400 text-white" href="#">Instagram</a>
+          <a class="mr-16 inline-flex items-center font-heading text-darkBlueGray-300 hover:text-darkBlueGray-400"
+            href="#">
+            <span class="mr-4 text-white">Linkedin</span>
+            <svg width="8" height="5" viewbox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg"></svg></a>
+
+        </div>
+        <div class="w-full lg:w-2/6 px-4">
+          <div class="justify-end flex">
+            <p class="mr-20 text-sm tracking-widest text-white">© 2021 hkldtrinanda</p>
+            <a href="#">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  <script src="js/charts-demo.js"></script>
+  <script>AOS.init();</script>
+  <script>
+    window.addEventListener("scroll", () => {
+      if (window.pageYOffset > 300) {
+        document.getElementById("tombolup")?.classList.remove('hidden');
+      } else {
+        document.getElementById("tombolup")?.classList.add('hidden');
+      }
+    });
+  </script>
 </body>
 
 </html>
